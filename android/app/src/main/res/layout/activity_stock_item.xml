@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <ScrollView
+    android:id="@+id/scrollViewContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/btnBottomSection"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      tools:context=".ui.activities.StockItemActivity">
+
+      <Button
+        android:id="@+id/btnBack"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/back_btn"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/layoutStockTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/stock_item_bookmark"
+        app:layout_constraintBottom_toTopOf="@+id/layoutStockTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <LinearLayout
+        android:id="@+id/layoutStockTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12">
+
+        <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center_vertical"
+          android:orientation="vertical"
+          app:layout_constraintEnd_toStartOf="@+id/stockCurrentPrice">
+
+          <TextView
+            android:id="@+id/stockSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AAPL"
+            android:textColor="@color/stock_info_color"
+            android:textSize="17sp" />
+
+          <TextView
+            android:id="@+id/stockName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple Inc."
+            android:textColor="@color/stock_info_color"
+            android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/linearLayout"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <TextView
+            android:id="@+id/stockCurrentPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$325.12"
+            android:textColor="@color/stock_info_color"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/stockPercentChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(+0.38%) 1D"
+            android:textColor="@color/stock_info_green_color"
+            android:textStyle="bold" />
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/layoutIndustry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutStockTop"
+        app:layout_constraintVertical_bias="0.03">
+
+        <TextView
+          android:id="@+id/companyIndustry"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Industry: COMPUTER &amp; OFFICE EQUIPMENT"
+          android:textColor="@color/stock_info_color"
+          android:textSize="14sp" />
+
+        <TextView
+          android:id="@+id/companyCountry"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Country: USA"
+          android:textColor="@color/stock_info_color"
+          android:textSize="14sp" />
+
+      </LinearLayout>
+
+      <TextView
+        android:id="@+id/companyDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:text="Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software, and online services. Apple is the world's largest technology company by revenue (totalling $274.5 billion in 2020) and, since January 2021, the world's most valuable company. As of 2021, Apple is the world's fourth-largest PC vendor by unit sales, and fourth-largest smartphone manufacturer. It is one of the Big Five American information technology companies, along with Amazon, Google, Microsoft, and Facebook."
+        android:textColor="@color/stock_info_color"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutIndustry"
+        app:layout_constraintVertical_bias="0.07" />
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFilters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/stockLineChart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/companyDescription"
+        app:layout_constraintVertical_bias="0.05" />
+
+      <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/stockLineChart"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewFilters"
+        app:layout_constraintVertical_bias="0.15" />
+
+
+      <LinearLayout
+        android:id="@+id/stockStatistics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stockLineChart">
+
+        <TextView
+          android:id="@+id/stock_52week_High"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="High(52 week): 312.2$"
+          android:textColor="@color/stock_info_color"
+          android:textSize="13sp" />
+
+        <TextView
+          android:id="@+id/stock_52week_Low"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Low(52 week): 312.2$"
+          android:textColor="@color/stock_info_color"
+          android:textSize="13sp" />
+      </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </ScrollView>
+
+  <LinearLayout
+    android:id="@+id/btnBottomSection"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="15dp"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal"
+    android:gravity="center"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <Button
+      android:id="@+id/stockBuyButton"
+      android:layout_width="0dp"
+      android:layout_weight="1"
+      android:layout_marginRight="20dp"
+      android:layout_height="wrap_content"
+      android:backgroundTint="@color/buy_stock_btn"
+      android:textColor="@color/buy_stock_btn_text"
+      android:text="Buy"
+      android:textStyle="bold"/>
+
+    <Button
+      android:id="@+id/stockSellButton"
+      style="?android:attr/borderlessButtonStyle"
+      android:layout_width="0dp"
+      android:layout_weight="1"
+      android:layout_height="wrap_content"
+      android:text="Sell"
+      android:textColor="@color/buy_stock_btn_text"
+      android:background="@drawable/stock_sell_btn_bg"/>
+
+  </LinearLayout>
+
+</RelativeLayout>

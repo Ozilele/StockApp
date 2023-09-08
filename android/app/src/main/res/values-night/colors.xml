@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="primary_color">#000000</color>
+  <color name="chart_line_color">#A8DF8E</color>
+  <color name="stock_item_white">#FDE5EC</color>
+  <color name="stock_percent_down">#F6635C</color>
+  <color name="portfolio_fragment_purple">#6114c1</color>
+  <color name="stock_percentPlus_icon_color">#27a801</color>
+  <color name="stock_percentNeg_icon_color">#ec5545</color>
+  <color name="stock_quantity_color">#0c0c0d</color>
+  <color name="black">#FF000000</color>
+  <color name="white">#FFFFFFFF</color>
+  <!--  Main Activity-->
+  <color name="bottom_app_bar_color">#272829</color>
+  <color name="stock_name">#33BBC5</color>
+  <color name="floating_action_btn_color">#6527BE</color>
+  <color name="stock_item_hover_color">#272829</color>
+  <!--    Stock Item Activity-->
+  <color name="back_btn_color">#FFFFFFFF</color>
+  <color name="stock_info_color">#fff</color>
+  <color name="stock_info_green_color">#6BF3AD</color>
+  <color name="chart_color">#6BF3AD</color>
+<!--  1AA37C-->
+  <color name="buy_stock_btn">#52a940</color>
+  <color name="buy_stock_btn_text">#F3FDE8</color>
+  <color name="stock_bookmark_color">#FFFFFFFF</color>
+  <!--    Portfolio Fragment -->
+  <color name="portfolio_stock_bg_color">#352F44</color>
+  <color name="portfolio_stock_name_color">#fff</color>
+  <color name="portfolio_stock_price_color">#fff</color>
+<!--  Login Activity-->
+  <color name="editText_clear_color">#9400FF</color>
+  <color name="login_purple_color">#793FDF</color>
+  <color name="login_info_color">#FFF0F5</color>
+<!--  BottomNavigationView-->
+  <color name="bottom_menu_item_color">#BC7AF9</color>
+  <color name="bottom_menu_item_text_color">#F0F0F0</color>
+</resources>

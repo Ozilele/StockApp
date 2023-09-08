@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="82dp"
+  android:paddingHorizontal="12dp"
+  android:paddingVertical="8dp"
+  android:layout_marginTop="12dp"
+  android:id="@+id/stockSearchItem"
+  android:background="@drawable/border_bottom"
+  android:layout_gravity="center_horizontal"
+  android:orientation="horizontal">
+
+  <LinearLayout
+    android:id="@+id/linearLayoutStockData"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/stockExchange"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+      android:id="@+id/stockName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Apple Inc"
+      android:textColor="@color/stock_name"
+      android:textSize="18sp" />
+
+    <TextView
+      android:id="@+id/stockSymbol"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="ANC"
+      android:textColor="@color/stock_info_color"
+      android:textSize="15sp" />
+
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/stockExchange"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="NYSE"
+    android:textSize="15sp"
+    android:textColor="@color/stock_info_color"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

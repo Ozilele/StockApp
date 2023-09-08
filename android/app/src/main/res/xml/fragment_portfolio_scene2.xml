@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+  <Transition
+    motion:constraintSetEnd="@+id/end"
+    motion:constraintSetStart="@id/start"
+    motion:duration="1800">
+    <KeyFrameSet>
+      <KeyAttribute
+        motion:motionTarget="@+id/pieChartBox"
+        motion:framePosition="100"
+        android:alpha="0" />
+      <KeyAttribute
+        motion:motionTarget="@+id/pieChartBox"
+        motion:framePosition="50"
+        android:alpha="0"/>
+      <KeyAttribute
+        motion:motionTarget="@+id/pieChartBox"
+        motion:framePosition="100"
+        android:scaleX="0" />
+      <KeyAttribute
+        motion:motionTarget="@+id/pieChartBox"
+        motion:framePosition="100"
+        android:scaleY="0" />
+    </KeyFrameSet>
+    <OnSwipe
+      motion:touchAnchorId="@+id/pieChartBox"
+      motion:touchAnchorSide="bottom" />
+  </Transition>
+
+  <ConstraintSet android:id="@+id/start">
+  </ConstraintSet>
+
+  <ConstraintSet android:id="@+id/end">
+<!--    // pie chart-->
+    <Constraint
+      android:layout_height="1dp"
+      android:layout_width="match_parent"
+      android:id="@+id/pieChartBox" />
+    <Constraint
+      android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      android:layout_marginTop="20dp"
+      motion:layout_constraintStart_toStartOf="parent"
+      motion:layout_constraintHorizontal_bias="0.5"
+      motion:layout_constraintEnd_toEndOf="parent"
+      motion:layout_constraintTop_toBottomOf="@+id/pieChartBox"
+      motion:layout_constraintBottom_toTopOf="@+id/recyclerViewPortfolio"
+      motion:layout_constraintVertical_bias="0.0"
+      android:id="@+id/linearLayoutPortfolioAnalyticsBox" />
+  </ConstraintSet>
+</MotionScene>

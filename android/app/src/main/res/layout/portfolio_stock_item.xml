@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="85dp"
+  android:layout_marginBottom="10dp">
+
+  <LinearLayout
+    android:id="@+id/portfolioStockItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="15dp"
+    android:background="@drawable/portfolio_stock_bg"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:gravity="center_vertical"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        >
+
+        <TextView
+          android:id="@+id/portfolioStockSymbol"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="AAPL"
+          android:textColor="@color/portfolio_stock_name_color"
+          android:textSize="13sp"
+          android:layout_marginRight="6dp"
+          android:textStyle="italic" />
+
+        <TextView
+          android:id="@+id/stockQuantity"
+          android:layout_width="32dp"
+          android:layout_height="20dp"
+          android:text="x 10"
+          android:textAlignment="center"
+          android:background="@drawable/portfolio_stock_quantity_bg"
+          android:textColor="#9BABB8"
+          android:textSize="13sp" />
+
+      </LinearLayout>
+
+
+      <TextView
+        android:id="@+id/portfolioStockName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Apple Inc."
+        android:textColor="@color/portfolio_stock_name_color"
+        android:textFontWeight="600"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/portfolioLayoutEnd"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_gravity="center">
+
+      <TextView
+        android:id="@+id/portfolioStockValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$325.12"
+        android:textAlignment="center"
+        android:textColor="@color/portfolio_stock_price_color"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+          android:id="@+id/portfolioStockPercentChange"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="(+0.38%)"
+          android:textSize="12dp"
+          android:layout_marginRight="5dp"
+          android:textColor="@color/portfolio_stock_name_color" />
+
+        <ImageButton
+          android:id="@+id/portfolioStockPercentIcon"
+          android:layout_width="18dp"
+          android:layout_height="18dp"
+          android:scaleType="center"
+          android:background="@drawable/portfolio_stock_percent_bg"
+          app:tint="@color/stock_item_white"
+          android:src="@drawable/portfolio_arrow_up"/>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
