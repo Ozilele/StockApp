@@ -6,6 +6,14 @@ Kotlin Stock Application for getting data about stocks, viewing stock's prices c
 ## API used for this project
 [Used API](https://www.alphavantage.co/)
 
+## Application presentation:
+!["Home Activity Screen"](images/activity_home.png)
+!["Home Activity Light Mode Screen](images/activity_home_light.png)
+!["Stock Activity 1Y Chart](images/stock_activity.png)
+!["Stock Activity 3M Chart](images/stock_activity_3m.png)
+!["Portfolio"](images/portfolio.png)
+!["Login Activity"](images/login.png)
+
 ## Tech Stack
 On Frontend:
 * Kotlin
@@ -14,6 +22,8 @@ On Frontend:
 * Room for local database
 * Dagger Hilt for dependency injection
 * MPAndroidChart for stock's financial charts
+* MotionLayout for viewing stocks in portfolio
+* Light/Dark Mode switch
 * SharedPreferences for saving token when user has logged in and to avoid another login when user closes app
 On Backend:
 * Ktor server
