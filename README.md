@@ -7,12 +7,29 @@ Kotlin Stock Application for getting data about stocks, viewing stock's prices c
 [Used API](https://www.alphavantage.co/)
 
 ## Application presentation:
-!["Home Activity Screen"](images/activity_home.png)
-!["Home Activity Light Mode Screen](images/activity_home_light.png)
-!["Stock Activity 1Y Chart](images/stock_activity.png)
-!["Stock Activity 3M Chart](images/stock_activity_3m.png)
-!["Portfolio"](images/portfolio.png)
-!["Login Activity"](images/login.png)
+<div align="center" style="margin-bottom: 20px">
+  <img src="images/activity_home.png" alt="Home Activity Screen" width="400" height="600">
+</div>
+
+<div align="center" style="margin-bottom: 20px">
+  <img src="images/activity_home_light.png" alt="Home Activity Light Mode Screen" width="400" height="600">
+</div>
+
+<div align="center" style="margin-bottom: 20px">
+  <img src="images/stock_activity.png" alt="Stock Activity 1Y Chart" width="400" height="600">
+</div>
+
+<div align="center" style="margin-bottom: 20px">
+  <img src="images/stock_activity_3m.png" alt="Stock Activity 3M Chart" width="400" height="600">
+</div>
+
+<div align="center" style="margin-bottom: 20px">
+  <img src="images/portfolio.png" alt="Portfolio Activity" width="400" height="600">
+</div>
+
+<div align="center" style="margin-bottom: 20px">
+  <img src="images/login.png" alt="Login Activity" width="400" height="600">
+</div>
 
 ## Tech Stack
 On Frontend:
@@ -25,6 +42,7 @@ On Frontend:
 * MotionLayout for viewing stocks in portfolio
 * Light/Dark Mode switch
 * SharedPreferences for saving token when user has logged in and to avoid another login when user closes app
+
 On Backend:
 * Ktor server
 * PostgreSQL Local Database for storing users data
