@@ -11,7 +11,7 @@ import retrofit2.http.POST
 interface AuthApi {
 
   companion object {
-    const val BASE_URL = "http://192.168.1.4:5500"
+    const val BASE_URL = "http://192.168.1.6:5500"
   }
 
   @POST("/auth/register")

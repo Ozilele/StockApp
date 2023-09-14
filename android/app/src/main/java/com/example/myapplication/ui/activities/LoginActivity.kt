@@ -22,6 +22,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
 
+  private var isFirstRender = true
   private lateinit var binding: ActivityLoginBinding
   private lateinit var emailEditText: TextInputEditText
   private lateinit var passwordEditText: TextInputEditText
@@ -44,6 +45,7 @@ class LoginActivity : AppCompatActivity() {
       registerTextView = registerNowText
       this@LoginActivity.progressBar = progressBar
     }
+
     observeViewModel()
     applyListeners()
   }
@@ -61,8 +63,20 @@ class LoginActivity : AppCompatActivity() {
           val intent = Intent(this, MainActivity::class.java)
           startActivity(intent)
         }
-        is AuthResult.Unauthorized -> Toast.makeText(this, "Invalid data 🔒", Toast.LENGTH_SHORT).show()
-        is AuthResult.UnknownError -> Toast.makeText(this, "Unknown error happened 😥", Toast.LENGTH_SHORT).show()
+        is AuthResult.Unauthorized -> {
+          if(isFirstRender) {
+            isFirstRender = false
+            return@observe
+          }
+          Toast.makeText(this, "Invalid data 🔒", Toast.LENGTH_SHORT).show()
+        }
+        is AuthResult.UnknownError -> {
+          if(isFirstRender) {
+            isFirstRender = false
+            return@observe
+          }
+          Toast.makeText(this, "Unknown error happened 😥", Toast.LENGTH_SHORT).show()
+        }
       }
     }
   }

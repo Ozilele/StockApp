@@ -12,7 +12,7 @@ class AuthViewModel (
   private val repository: AuthRepository
 ) : ViewModel() {
 
-  private var _authState = MutableLiveData(AuthState(isLoading = true, authResponse = AuthResult.Unauthorized())) // state of the auth mechanism
+  private var _authState = MutableLiveData(AuthState(isLoading = false, authResponse = AuthResult.Unauthorized())) // state of the auth mechanism
   val authState: LiveData<AuthState> get() = _authState
 
   init {
