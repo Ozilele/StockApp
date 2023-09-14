@@ -7,28 +7,38 @@ Kotlin Stock Application for getting data about stocks, viewing stock's prices c
 [Used API](https://www.alphavantage.co/)
 
 ## Application presentation:
-<div align="center" style="margin-bottom: 20px">
-  <img src="images/activity_home.png" alt="Home Activity Screen" width="400" height="600">
+<div align="center">
+  <img src="images/activity_home.png" alt="Home Activity Screen" width="400">
 </div>
 
-<div align="center" style="margin-bottom: 20px">
-  <img src="images/activity_home_light.png" alt="Home Activity Light Mode Screen" width="400" height="600">
+<br/>
+
+<div align="center">
+  <img src="images/activity_home_light.png" alt="Home Activity Light Mode Screen" width="400">
 </div>
 
-<div align="center" style="margin-bottom: 20px">
-  <img src="images/stock_activity.png" alt="Stock Activity 1Y Chart" width="400" height="600">
+<br/>
+
+<div align="center">
+  <img src="images/stock_activity.png" alt="Stock Activity 1Y Chart" width="400">
 </div>
 
-<div align="center" style="margin-bottom: 20px">
-  <img src="images/stock_activity_3m.png" alt="Stock Activity 3M Chart" width="400" height="600">
+<br/>
+
+<div align="center">
+  <img src="images/stock_activity_3m.png" alt="Stock Activity 3M Chart" width="400">
 </div>
 
-<div align="center" style="margin-bottom: 20px">
-  <img src="images/portfolio.png" alt="Portfolio Activity" width="400" height="600">
+<br/>
+
+<div align="center">
+  <img src="images/portfolio.png" alt="Portfolio Activity" width="400">
 </div>
 
+<br/>
+
 <div align="center" style="margin-bottom: 20px">
-  <img src="images/login.png" alt="Login Activity" width="400" height="600">
+  <img src="images/login.png" alt="Login Activity" width="400">
 </div>
 
 ## Tech Stack
